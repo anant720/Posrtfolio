@@ -160,13 +160,22 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Hero Visual - User Photo Placeholder */}
+          {/* Hero Visual - Profile Photo */}
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
             <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full md:rounded-2xl overflow-hidden border-2 border-gray-800 shadow-2xl group">
-              {/* PHOTO PLACEHOLDER */}
-              <div className="absolute inset-0 bg-[#151515] flex flex-col items-center justify-center text-gray-600 group-hover:text-cyan-500 transition-colors">
+              <img
+                src="/profile.jpg"
+                alt="Anant Suthar - Cybersecurity & Full Stack Developer"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              {/* Fallback for broken images */}
+              <div className="absolute inset-0 bg-[#151515] flex flex-col items-center justify-center text-gray-600 group-hover:text-cyan-500 transition-colors hidden">
                  <User size={64} className="mb-4" />
-                 <span className="uppercase tracking-widest text-sm font-bold">Your Photo Here</span>
+                 <span className="uppercase tracking-widest text-sm font-bold">Profile Photo</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-transparent pointer-events-none"></div>
             </div>
@@ -551,49 +560,66 @@ const Portfolio = () => {
                 title: "Foundations of Cybersecurity",
                 issuer: "Google",
                 date: "Jan 2026",
+                image: "/cert-cybersecurity.jpg",
                 link: "https://www.coursera.org/account/accomplishments/verify/8PGJ029REWQA"
               },
               {
                 title: "Introduction to Web Development",
                 issuer: "UC Davis",
                 date: "Jan 2026",
+                image: "/cert-webdev.jpg",
                 link: "https://coursera.org/share/b0cb7b463d07ce63aabbaa58dd211bed"
               },
               {
                 title: "Bits and Bytes of Computer Networking",
                 issuer: "Google",
                 date: "Jan 2026",
+                image: "/cert-networking.jpg",
                 link: "https://coursera.org/share/fd9f3dbee1b433e0a0af3001369986f9"
               },
               {
                 title: "Object-Oriented Programming in Java",
                 issuer: "IBM",
                 date: "Jan 2026",
+                image: "/cert-java.jpg",
                 link: "https://coursera.org/share/c2867e0f38ad955dd4be2a1f179ed3f3"
               },
               {
                 title: "HTML, CSS, and JS for Web Devs",
                 issuer: "Johns Hopkins Univ.",
                 date: "Dec 2025",
+                image: "/cert-frontend.jpg",
                 link: "https://coursera.org/share/65034878fcb218a396cddd5f8c2100ae"
               },
               {
                 title: "Google Cloud Computing Foundations",
                 issuer: "Google Cloud",
                 date: "Feb 2026",
+                image: "/cert-cloud.jpg",
                 link: "#"
               },
               {
                  title: "Spoken Tutorial C & C++",
                  issuer: "IIT Bombay",
                  date: "May 2025",
+                 image: "/cert-cpp.jpg",
                  link: "#"
               }
             ].map((cert, index) => (
               <div key={index} className="group bg-[#151515] border border-gray-800 p-6 rounded-lg hover:border-cyan-500/50 transition-colors">
-                {/* Certificate Photo Placeholder */}
-                <div className="w-full h-40 bg-gray-900 rounded mb-4 border border-gray-800 flex flex-col items-center justify-center text-gray-600 group-hover:bg-gray-800 transition-colors overflow-hidden relative">
-                   <div className="absolute inset-0 flex flex-col items-center justify-center">
+                {/* Certificate Image */}
+                <div className="w-full h-40 bg-gray-900 rounded mb-4 border border-gray-800 overflow-hidden group-hover:border-cyan-500/30 transition-colors">
+                   <img
+                     src={cert.image}
+                     alt={`${cert.title} Certificate`}
+                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                     onError={(e) => {
+                       e.target.style.display = 'none';
+                       e.target.nextSibling.style.display = 'flex';
+                     }}
+                   />
+                   {/* Fallback for broken images */}
+                   <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
                      <FileText size={32} className="mb-2 opacity-50" />
                      <span className="text-[10px] uppercase tracking-widest font-semibold">Cert Photo</span>
                    </div>
