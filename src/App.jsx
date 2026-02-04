@@ -30,6 +30,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
 
   // Handle scroll effects
   useEffect(() => {
@@ -166,7 +167,11 @@ const Portfolio = () => {
               <img
                 src="/profile.jpg"
                 alt="Anant Suthar - Cybersecurity & Full Stack Developer"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onClick={() => setFullscreenImage({
+                  src: "/profile.jpg",
+                  alt: "Anant Suthar - Cybersecurity & Full Stack Developer"
+                })}
                 onError={(e) => {
                   e.target.style.display = 'none';
                   e.target.nextSibling.style.display = 'flex';
@@ -308,10 +313,26 @@ const Portfolio = () => {
                 Contributed to outreach initiatives and supported fundraising activities to promote the organization's mission. 
                 Demonstrated strong communication skills by engaging with networks and encouraging community participation for social impact.
               </p>
-               {/* Internship Certificate Placeholder */}
-               <div className="mt-4 w-full md:w-64 h-32 bg-[#151515] border border-gray-800 rounded flex flex-col items-center justify-center text-gray-600 hover:border-cyan-500/50 transition-colors cursor-pointer">
-                  <FileText size={24} className="mb-2" />
-                  <span className="text-xs uppercase tracking-wide">Internship Certificate</span>
+               {/* Internship Certificate */}
+               <div className="mt-4 w-full md:w-64 h-32 bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-cyan-500/50 transition-colors cursor-pointer">
+                  <img
+                    src="/internship-fundraising.jpg"
+                    alt="Fund Raising Head Internship Certificate - Aapka Sahara Foundation"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    onClick={() => setFullscreenImage({
+                      src: "/internship-fundraising.jpg",
+                      alt: "Fund Raising Head Internship Certificate - Aapka Sahara Foundation"
+                    })}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  {/* Fallback for broken images */}
+                  <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
+                     <FileText size={24} className="mb-2" />
+                     <span className="text-xs uppercase tracking-wide">Internship Certificate</span>
+                  </div>
                </div>
             </div>
           </div>
@@ -612,7 +633,11 @@ const Portfolio = () => {
                    <img
                      src={cert.image}
                      alt={`${cert.title} Certificate`}
-                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                     onClick={() => setFullscreenImage({
+                       src: cert.image,
+                       alt: `${cert.title} Certificate - ${cert.issuer}`
+                     })}
                      onError={(e) => {
                        e.target.style.display = 'none';
                        e.target.nextSibling.style.display = 'flex';
@@ -690,6 +715,32 @@ const Portfolio = () => {
           © {new Date().getFullYear()} Anant Suthar. Built with React & Tailwind CSS.
         </p>
       </footer>
+
+      {/* Fullscreen Image Modal */}
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setFullscreenImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <img
+              src={fullscreenImage.src}
+              alt={fullscreenImage.alt}
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={() => setFullscreenImage(null)}
+              className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 rounded-full p-2 transition-colors"
+            >
+              <X size={24} />
+            </button>
+            <div className="absolute bottom-4 left-4 text-white bg-black/50 px-3 py-1 rounded">
+              <p className="text-sm font-medium">{fullscreenImage.alt}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
