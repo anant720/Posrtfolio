@@ -701,6 +701,13 @@ const Portfolio = () => {
                  date: "May 2025",
                  image: "/cert-cpp.jpg",
                  link: "#"
+              },
+              {
+                 title: "Connect And Protect: Networks and Networks Security",
+                 issuer: "Google",
+                 date: "Feb 2026",
+                 image: "/cert-networksecurity.jpg",
+                 link: "#"
               }
             ].map((cert, index) => (
               <div key={index} className="group bg-[#151515] border border-gray-800 p-6 rounded-lg hover:border-cyan-500/50 transition-colors">
