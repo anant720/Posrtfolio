@@ -41,6 +41,82 @@ const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Content Protection - Prevent right-click and keyboard shortcuts
+  useEffect(() => {
+    // Prevent right-click context menu
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // Prevent keyboard shortcuts for copy, paste, select all, etc.
+    const handleKeyDown = (e) => {
+      // Prevent Ctrl+A (select all)
+      if (e.ctrlKey && (e.key === 'a' || e.key === 'A')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+C (copy)
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'C')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+X (cut)
+      if (e.ctrlKey && (e.key === 'x' || e.key === 'X')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+V (paste) - optional, can be enabled if needed
+      if (e.ctrlKey && (e.key === 'v' || e.key === 'V')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+U (view source)
+      if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent F12 (developer tools)
+      if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+Shift+I (developer tools)
+      if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+Shift+C (inspect element)
+      if (e.ctrlKey && e.shiftKey && (e.key === 'c' || e.key === 'C')) {
+        e.preventDefault();
+        return false;
+      }
+      // Prevent Ctrl+Shift+J (console)
+      if (e.ctrlKey && e.shiftKey && (e.key === 'j' || e.key === 'J')) {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    // Prevent drag and drop
+    const handleDragStart = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    // Add event listeners
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('dragstart', handleDragStart);
+
+    // Cleanup function
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('dragstart', handleDragStart);
+    };
+  }, []);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
