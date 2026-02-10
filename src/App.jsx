@@ -406,8 +406,8 @@ const Portfolio = () => {
                   />
                   {/* Fallback for broken images */}
                   <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
-                     <FileText size={24} className="mb-2" />
-                     <span className="text-xs uppercase tracking-wide">Internship Certificate</span>
+                  <FileText size={24} className="mb-2" />
+                  <span className="text-xs uppercase tracking-wide">Internship Certificate</span>
                   </div>
                </div>
             </div>
@@ -649,6 +649,92 @@ const Portfolio = () => {
           <div className="text-center mb-12">
             <h2 className="text-xs font-bold tracking-[0.3em] text-cyan-500 uppercase mb-2">Education & Learning</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-white">Certifications</h3>
+          </div>
+
+          {/* Specialization / Professional Certificate */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="bg-[#111111] border border-cyan-500/50 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div className="w-full md:w-64 h-44 md:h-52 rounded-xl overflow-hidden border border-gray-800 flex-shrink-0 bg-gray-900">
+                <img
+                  src="/cert-googlecyber.jpg"
+                  alt="Google Cybersecurity Professional Certificate"
+                  className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+                  onClick={() =>
+                    setFullscreenImage({
+                      src: "/cert-googlecyber.jpg",
+                      alt: "Google Cybersecurity Professional Certificate",
+                    })
+                  }
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback for broken image */}
+                <div className="w-full h-full hidden items-center justify-center text-gray-500 bg-[#151515]">
+                  <FileText size={32} className="mb-2 opacity-60" />
+                  <span className="text-[10px] uppercase tracking-widest font-semibold">Certificate</span>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-2">
+                    Specialization Certificate
+                  </p>
+                  <h4 className="text-2xl md:text-3xl font-bold text-white leading-snug">
+                    Google Cybersecurity Professional Certificate
+                  </h4>
+                  <p className="text-xs text-gray-400 mt-1">
+                    Issued by <span className="text-cyan-400 font-medium">Google</span> • 9-course professional program
+                  </p>
+                </div>
+
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Completed a rigorous, hands-on specialization designed to prepare for entry-level cybersecurity roles.
+                  The program covers risk management, network security, Linux &amp; SQL, Python automation, SIEM tools,
+                  and end-to-end incident response workflows.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-3 text-sm text-gray-300">
+                  <div>
+                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] mb-1">
+                      Coursework Highlights
+                    </p>
+                    <ul className="list-disc list-inside space-y-1 text-xs md:text-sm">
+                      <li>Foundations of cybersecurity, CIA triad &amp; security ethics</li>
+                      <li>Risk, threats &amp; vulnerabilities using NIST frameworks</li>
+                      <li>Network security with firewalls, VPNs &amp; secure protocols</li>
+                      <li>Linux, SQL &amp; log analysis for threat investigation</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] mb-1">
+                      Skills Gained
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        'Python Automation',
+                        'Linux',
+                        'SQL',
+                        'SIEM & IDS',
+                        'Network Security',
+                        'Risk Management',
+                        'Incident Response',
+                        'Packet Analysis',
+                      ].map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/40 text-[10px] font-semibold tracking-wide"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
