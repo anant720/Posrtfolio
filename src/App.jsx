@@ -465,7 +465,18 @@ const Portfolio = () => {
                 <h4 className="text-lg font-bold text-white">Cybersecurity</h4>
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Ethical Hacking', 'Network Security', 'SIEM', 'Cloud Security', 'OWASP', 'Cryptography', 'Penetration Testing'].map(skill => (
+                {[
+                  'Network Security',
+                  'SIEM & IDS',
+                  'Risk Management',
+                  'Incident Response',
+                  'Packet Analysis',
+                  'Ethical Hacking',
+                  'Cloud Security',
+                  'OWASP',
+                  'Cryptography',
+                  'Penetration Testing',
+                ].map(skill => (
                   <span key={skill} className="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded border border-gray-800">{skill}</span>
                 ))}
               </div>
@@ -504,7 +515,20 @@ const Portfolio = () => {
                 <h4 className="text-lg font-bold text-white">Tools & Soft Skills</h4>
               </div>
               <div className="flex flex-wrap gap-2">
-                {['Git', 'GitHub', 'VS Code', 'Postman', 'Figma', 'Canva', 'Notion', 'Leadership', 'Communication'].map(skill => (
+                {[
+                  'Git',
+                  'GitHub',
+                  'VS Code',
+                  'Postman',
+                  'Linux (CLI)',
+                  'Security Monitoring',
+                  'SIEM Tools',
+                  'Figma',
+                  'Canva',
+                  'Notion',
+                  'Leadership',
+                  'Communication',
+                ].map(skill => (
                   <span key={skill} className="px-3 py-1 bg-gray-900 text-gray-300 text-xs rounded border border-gray-800">{skill}</span>
                 ))}
               </div>
