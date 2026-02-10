@@ -696,6 +696,16 @@ const Portfolio = () => {
                   and end-to-end incident response workflows.
                 </p>
 
+                <a
+                  href="https://coursera.org/share/32de91a4599b16abad3c579d3cc42794"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold tracking-wide text-cyan-300 hover:text-white bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/40 px-4 py-2 rounded-full transition-colors"
+                >
+                  View Credential on Coursera
+                  <ExternalLink size={14} />
+                </a>
+
                 <div className="grid md:grid-cols-2 gap-3 text-sm text-gray-300">
                   <div>
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-[0.2em] mb-1">
