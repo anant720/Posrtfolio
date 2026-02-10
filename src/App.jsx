@@ -206,7 +206,7 @@ const Portfolio = () => {
               A driven B.Tech CSE student passionate about building secure, real-world solutions. 
               Bridging the gap between robust cybersecurity and modern web development.
             </p>
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <button 
                 onClick={() => scrollToSection('projects')}
                 className="px-8 py-3 bg-white text-black font-bold tracking-widest hover:bg-cyan-400 hover:scale-105 transition-all duration-300"
@@ -219,6 +219,14 @@ const Portfolio = () => {
               >
                 CONTACT
               </button>
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="px-8 py-3 bg-cyan-500 text-black font-bold tracking-widest hover:bg-cyan-400 hover:scale-105 transition-all duration-300"
+              >
+                RESUME
+              </a>
             </div>
             
             <div className="flex flex-wrap items-center gap-6 pt-8 text-gray-500">
