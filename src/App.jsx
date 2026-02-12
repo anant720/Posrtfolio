@@ -671,6 +671,31 @@ const Portfolio = () => {
               </div>
             </div>
 
+             {/* Project 6: LiquidPass */}
+             <div className="group bg-[#151515] border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+              <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
+                 <div className="absolute inset-0 flex items-center justify-center">
+                    <Lock size={48} className="text-cyan-500/50 group-hover:text-cyan-500 transition-colors" />
+                 </div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <h4 className="text-xl font-bold text-white mb-2">LiquidPass</h4>
+                <p className="text-gray-400 text-sm mb-4">
+                  Zero-knowledge, end-to-end encrypted password vault with AES-256-GCM encryption, PBKDF2 key derivation, and client-side Web Crypto API. Master password never leaves the browser.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-auto mb-4">
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">MERN</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">AES-256-GCM</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">E2E Encryption</span>
+                </div>
+                <div className="pt-4 border-t border-gray-800 flex justify-end items-center">
+                   <a href="https://github.com/anant720/LiquidPass" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                    <Github size={18} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
