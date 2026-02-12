@@ -38,7 +38,7 @@ MDS Senior Secondary School • 84.60%
 Full-stack freelance marketplace with secure authentication, real-time database, and payment gateway support. — [Live Demo](https://gig-flow-wine-alpha.vercel.app/)
 
 **LiquidPass — E2E Encrypted Password Manager** — *MERN · AES-256-GCM · Web Crypto API*
-Zero-knowledge password vault with client-side AES-256-GCM encryption, PBKDF2 key derivation (600K iterations), Helmet.js hardened API, and rate limiting. Master password never leaves the browser.
+Zero-knowledge password vault with client-side AES-256-GCM encryption, PBKDF2 key derivation (600K iterations), Helmet.js hardened API, and rate limiting. Master password never leaves the browser. — [Live Demo](https://passfront.vercel.app/)
 
 **SecurePass Analyzer** — *Security · zxcvbn*
 Cybersecurity tool analysing password strength using custom rules and zxcvbn, featuring attack simulations and breach detection.

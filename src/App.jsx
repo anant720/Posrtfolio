@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  Code, 
-  Shield, 
-  Terminal, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Code,
+  Shield,
+  Terminal,
   ChevronDown,
   Menu,
   X,
@@ -129,9 +129,8 @@ const Portfolio = () => {
   const NavLink = ({ id, label }) => (
     <button
       onClick={() => scrollToSection(id)}
-      className={`text-sm tracking-widest uppercase hover:text-cyan-400 transition-colors duration-300 ${
-        activeSection === id ? 'text-cyan-400 font-bold' : 'text-gray-400'
-      }`}
+      className={`text-sm tracking-widest uppercase hover:text-cyan-400 transition-colors duration-300 ${activeSection === id ? 'text-cyan-400 font-bold' : 'text-gray-400'
+        }`}
     >
       {label}
     </button>
@@ -140,16 +139,15 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-gray-200 font-sans selection:bg-cyan-500 selection:text-black">
       {/* Navigation */}
-      <nav 
-        className={`fixed w-full z-50 transition-all duration-500 ${
-          scrolled ? 'bg-[#0a0a0a]/90 backdrop-blur-md py-4 border-b border-gray-800' : 'bg-transparent py-6'
-        }`}
+      <nav
+        className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-[#0a0a0a]/90 backdrop-blur-md py-4 border-b border-gray-800' : 'bg-transparent py-6'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="text-2xl font-bold tracking-tighter text-white">
             ANANT<span className="text-cyan-500">.</span>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <NavLink id="home" label="Home" />
@@ -162,7 +160,7 @@ const Portfolio = () => {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -203,17 +201,17 @@ const Portfolio = () => {
               </span>
             </h1>
             <p className="text-gray-400 max-w-md text-lg leading-relaxed border-l-2 border-cyan-500 pl-4">
-              A driven B.Tech CSE student passionate about building secure, real-world solutions. 
+              A driven B.Tech CSE student passionate about building secure, real-world solutions.
               Bridging the gap between robust cybersecurity and modern web development.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <button 
+              <button
                 onClick={() => scrollToSection('projects')}
                 className="px-8 py-3 bg-white text-black font-bold tracking-widest hover:bg-cyan-400 hover:scale-105 transition-all duration-300"
               >
                 PORTFOLIO
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-3 border border-gray-600 text-white font-bold tracking-widest hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300"
               >
@@ -228,7 +226,7 @@ const Portfolio = () => {
                 RESUME
               </a>
             </div>
-            
+
             <div className="flex flex-wrap items-center gap-6 pt-8 text-gray-500">
               <a href="https://github.com/anant720" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-white transition-colors" title="GitHub">
                 <Github size={20} /> <span className="text-sm">GitHub</span>
@@ -263,8 +261,8 @@ const Portfolio = () => {
               />
               {/* Fallback for broken images */}
               <div className="absolute inset-0 bg-[#151515] flex flex-col items-center justify-center text-gray-600 group-hover:text-cyan-500 transition-colors hidden">
-                 <User size={64} className="mb-4" />
-                 <span className="uppercase tracking-widest text-sm font-bold">Profile Photo</span>
+                <User size={64} className="mb-4" />
+                <span className="uppercase tracking-widest text-sm font-bold">Profile Photo</span>
               </div>
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-transparent pointer-events-none"></div>
             </div>
@@ -285,8 +283,8 @@ const Portfolio = () => {
             Securing the Digital Future <br /> Building <span className="text-gray-500">Robust Systems</span>
           </h3>
           <p className="text-gray-400 leading-relaxed text-lg mb-10">
-            I am a B.Tech Cybersecurity student at MIT ADT University (2024-2028) with a fervent interest in secure coding, networking, and machine learning. 
-            My journey involves not just understanding how systems work, but how to protect them. 
+            I am a B.Tech Cybersecurity student at MIT ADT University (2024-2028) with a fervent interest in secure coding, networking, and machine learning.
+            My journey involves not just understanding how systems work, but how to protect them.
             From building AI-driven scam detection engines to full-stack e-commerce platforms, I merge security principles with functional design.
           </p>
         </div>
@@ -294,85 +292,85 @@ const Portfolio = () => {
 
       {/* Education & Achievements Section (Combined) */}
       <section id="education" className="py-24 bg-[#0a0a0a]">
-         <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-12">
-               {/* Left Column: Education */}
-               <div>
-                  <div className="flex items-center gap-3 mb-8">
-                     <Book className="text-cyan-500" size={28} />
-                     <h3 className="text-2xl font-bold text-white">Education</h3>
-                  </div>
-                  
-                  <div className="space-y-8 relative border-l border-gray-800 ml-3">
-                     <div className="relative pl-8 pb-2">
-                        <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
-                        <span className="text-xs font-bold text-cyan-500 bg-cyan-500/10 px-2 py-1 rounded mb-2 inline-block">2024 - 2028</span>
-                        <h4 className="text-xl font-bold text-white">B.Tech in Computer Science</h4>
-                        <p className="text-cyan-400 text-sm font-medium">MIT ADT University, Pune</p>
-                        <p className="text-gray-500 text-sm mt-1">Specialization in Cybersecurity</p>
-                     </div>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Left Column: Education */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <Book className="text-cyan-500" size={28} />
+                <h3 className="text-2xl font-bold text-white">Education</h3>
+              </div>
 
-                     <div className="relative pl-8">
-                        <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
-                        <span className="text-xs font-bold text-gray-500 bg-gray-800 px-2 py-1 rounded mb-2 inline-block">2024</span>
-                        <h4 className="text-xl font-bold text-white">Higher Secondary (XII)</h4>
-                        <p className="text-gray-400 text-sm">MDS Senior Secondary School</p>
-                        <p className="text-gray-500 text-sm mt-1">Science Stream • 84.60%</p>
-                     </div>
-                  </div>
-               </div>
+              <div className="space-y-8 relative border-l border-gray-800 ml-3">
+                <div className="relative pl-8 pb-2">
+                  <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-cyan-500 rounded-full"></div>
+                  <span className="text-xs font-bold text-cyan-500 bg-cyan-500/10 px-2 py-1 rounded mb-2 inline-block">2024 - 2028</span>
+                  <h4 className="text-xl font-bold text-white">B.Tech in Computer Science</h4>
+                  <p className="text-cyan-400 text-sm font-medium">MIT ADT University, Pune</p>
+                  <p className="text-gray-500 text-sm mt-1">Specialization in Cybersecurity</p>
+                </div>
 
-               {/* Right Column: Achievements & Hackathons */}
-               <div>
-                  <div className="flex items-center gap-3 mb-8">
-                     <Award className="text-yellow-500" size={28} />
-                     <h3 className="text-2xl font-bold text-white">Achievements</h3>
-                  </div>
-
-                  <div className="grid gap-4">
-                     {/* JEE Card */}
-                     <div className="bg-[#111] p-5 rounded-lg border border-gray-800 flex items-start gap-4 hover:border-yellow-500/30 transition-colors">
-                        <div className="bg-yellow-500/10 p-3 rounded-full text-yellow-500">
-                           <Award size={24} />
-                        </div>
-                        <div>
-                           <h4 className="text-white font-bold">JEE Main 2024 Qualified</h4>
-                           <p className="text-gray-400 text-sm mt-1">Secured <span className="text-white font-bold">96.4 Percentile</span> in one of India's most competitive engineering entrance exams.</p>
-                        </div>
-                     </div>
-
-                     {/* Hackathons Card */}
-                     <div className="bg-[#111] p-5 rounded-lg border border-gray-800 flex items-start gap-4 hover:border-purple-500/30 transition-colors">
-                        <div className="bg-purple-500/10 p-3 rounded-full text-purple-500">
-                           <Crosshair size={24} />
-                        </div>
-                        <div>
-                           <h4 className="text-white font-bold">Hackathon Participation</h4>
-                           <ul className="text-gray-400 text-sm mt-2 space-y-1 list-disc ml-4">
-                              <li><strong className="text-white">AI for Bharat:</strong> Participated in building AI-driven solutions for Indian demographics.</li>
-                              <li><strong className="text-white">AMD Slingshot:</strong> Competed in high-performance computing challenges.</li>
-                           </ul>
-                        </div>
-                     </div>
-                     
-                     {/* Competitive Programming Card */}
-                     <div className="bg-[#111] p-5 rounded-lg border border-gray-800 flex items-start gap-4 hover:border-green-500/30 transition-colors">
-                        <div className="bg-green-500/10 p-3 rounded-full text-green-500">
-                           <Code size={24} />
-                        </div>
-                        <div>
-                           <h4 className="text-white font-bold">Competitive Programming</h4>
-                           <p className="text-gray-400 text-sm mt-1 mb-2">Recently started journey on major platforms to enhance problem-solving skills.</p>
-                           <div className="flex gap-3">
-                              <a href="https://leetcode.com/u/__anant72/" target="_blank" rel="noreferrer" className="text-xs bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-gray-300 transition-colors">LeetCode</a>
-                              <a href="https://www.hackerrank.com/profile/nntsuthar" target="_blank" rel="noreferrer" className="text-xs bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-gray-300 transition-colors">HackerRank</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                <div className="relative pl-8">
+                  <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
+                  <span className="text-xs font-bold text-gray-500 bg-gray-800 px-2 py-1 rounded mb-2 inline-block">2024</span>
+                  <h4 className="text-xl font-bold text-white">Higher Secondary (XII)</h4>
+                  <p className="text-gray-400 text-sm">MDS Senior Secondary School</p>
+                  <p className="text-gray-500 text-sm mt-1">Science Stream • 84.60%</p>
+                </div>
+              </div>
             </div>
-         </div>
+
+            {/* Right Column: Achievements & Hackathons */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <Award className="text-yellow-500" size={28} />
+                <h3 className="text-2xl font-bold text-white">Achievements</h3>
+              </div>
+
+              <div className="grid gap-4">
+                {/* JEE Card */}
+                <div className="bg-[#111] p-5 rounded-lg border border-gray-800 flex items-start gap-4 hover:border-yellow-500/30 transition-colors">
+                  <div className="bg-yellow-500/10 p-3 rounded-full text-yellow-500">
+                    <Award size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">JEE Main 2024 Qualified</h4>
+                    <p className="text-gray-400 text-sm mt-1">Secured <span className="text-white font-bold">96.4 Percentile</span> in one of India's most competitive engineering entrance exams.</p>
+                  </div>
+                </div>
+
+                {/* Hackathons Card */}
+                <div className="bg-[#111] p-5 rounded-lg border border-gray-800 flex items-start gap-4 hover:border-purple-500/30 transition-colors">
+                  <div className="bg-purple-500/10 p-3 rounded-full text-purple-500">
+                    <Crosshair size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Hackathon Participation</h4>
+                    <ul className="text-gray-400 text-sm mt-2 space-y-1 list-disc ml-4">
+                      <li><strong className="text-white">AI for Bharat:</strong> Participated in building AI-driven solutions for Indian demographics.</li>
+                      <li><strong className="text-white">AMD Slingshot:</strong> Competed in high-performance computing challenges.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Competitive Programming Card */}
+                <div className="bg-[#111] p-5 rounded-lg border border-gray-800 flex items-start gap-4 hover:border-green-500/30 transition-colors">
+                  <div className="bg-green-500/10 p-3 rounded-full text-green-500">
+                    <Code size={24} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold">Competitive Programming</h4>
+                    <p className="text-gray-400 text-sm mt-1 mb-2">Recently started journey on major platforms to enhance problem-solving skills.</p>
+                    <div className="flex gap-3">
+                      <a href="https://leetcode.com/u/__anant72/" target="_blank" rel="noreferrer" className="text-xs bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-gray-300 transition-colors">LeetCode</a>
+                      <a href="https://www.hackerrank.com/profile/nntsuthar" target="_blank" rel="noreferrer" className="text-xs bg-gray-800 hover:bg-gray-700 px-3 py-1 rounded text-gray-300 transition-colors">HackerRank</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Work Experience Section */}
@@ -394,30 +392,30 @@ const Portfolio = () => {
                 <span className="text-cyan-400 font-medium">Aapka Sahara Foundation</span>
               </div>
               <p className="text-gray-400 text-sm leading-relaxed max-w-2xl">
-                Contributed to outreach initiatives and supported fundraising activities to promote the organization's mission. 
+                Contributed to outreach initiatives and supported fundraising activities to promote the organization's mission.
                 Demonstrated strong communication skills by engaging with networks and encouraging community participation for social impact.
               </p>
-               {/* Internship Certificate */}
-               <div className="mt-4 w-full md:w-64 h-32 bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-cyan-500/50 transition-colors cursor-pointer">
-                  <img
-                    src="/internship-fundraising.jpg"
-                    alt="Fund Raising Head Internship Certificate - Aapka Sahara Foundation"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
-                    onClick={() => setFullscreenImage({
-                      src: "/internship-fundraising.jpg",
-                      alt: "Fund Raising Head Internship Certificate - Aapka Sahara Foundation"
-                    })}
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  {/* Fallback for broken images */}
-                  <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
+              {/* Internship Certificate */}
+              <div className="mt-4 w-full md:w-64 h-32 bg-gray-900 border border-gray-800 rounded overflow-hidden hover:border-cyan-500/50 transition-colors cursor-pointer">
+                <img
+                  src="/internship-fundraising.jpg"
+                  alt="Fund Raising Head Internship Certificate - Aapka Sahara Foundation"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  onClick={() => setFullscreenImage({
+                    src: "/internship-fundraising.jpg",
+                    alt: "Fund Raising Head Internship Certificate - Aapka Sahara Foundation"
+                  })}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                {/* Fallback for broken images */}
+                <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
                   <FileText size={24} className="mb-2" />
                   <span className="text-xs uppercase tracking-wide">Internship Certificate</span>
-                  </div>
-               </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -426,7 +424,7 @@ const Portfolio = () => {
       {/* Detailed Skills Section */}
       <section id="skills" className="py-24 bg-[#0a0a0a]">
         <div className="max-w-6xl mx-auto px-6">
-           <div className="text-center mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-xs font-bold tracking-[0.3em] text-cyan-500 uppercase mb-2">Expertise</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-white">Technical Skills</h3>
           </div>
@@ -458,8 +456,8 @@ const Portfolio = () => {
               </div>
             </div>
 
-             {/* Cybersecurity */}
-             <div className="bg-[#151515] p-6 rounded-lg border border-gray-800 hover:border-red-500/30 transition-all">
+            {/* Cybersecurity */}
+            <div className="bg-[#151515] p-6 rounded-lg border border-gray-800 hover:border-red-500/30 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <Shield className="text-red-500" />
                 <h4 className="text-lg font-bold text-white">Cybersecurity</h4>
@@ -508,8 +506,8 @@ const Portfolio = () => {
               </div>
             </div>
 
-             {/* Tools */}
-             <div className="bg-[#151515] p-6 rounded-lg border border-gray-800 hover:border-blue-500/30 transition-all">
+            {/* Tools */}
+            <div className="bg-[#151515] p-6 rounded-lg border border-gray-800 hover:border-blue-500/30 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <Briefcase className="text-blue-500" />
                 <h4 className="text-lg font-bold text-white">Tools & Soft Skills</h4>
@@ -551,12 +549,12 @@ const Portfolio = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-             {/* Project 1: GigFlow */}
-             <div className="group bg-[#151515] border border-gray-800 hover:border-green-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+            {/* Project 1: GigFlow */}
+            <div className="group bg-[#151515] border border-gray-800 hover:border-green-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <Briefcase size={48} className="text-green-500/50 group-hover:text-green-500 transition-colors" />
-                 </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Briefcase size={48} className="text-green-500/50 group-hover:text-green-500 transition-colors" />
+                </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-bold text-white mb-2">GigFlow Marketplace</h4>
@@ -582,8 +580,8 @@ const Portfolio = () => {
             <div className="group bg-[#151515] border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <Lock size={48} className="text-cyan-500/50 group-hover:text-cyan-500 transition-colors" />
-                 </div>
+                  <Lock size={48} className="text-cyan-500/50 group-hover:text-cyan-500 transition-colors" />
+                </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-bold text-white mb-2">SecurePass Analyzer</h4>
@@ -595,7 +593,7 @@ const Portfolio = () => {
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">zxcvbn</span>
                 </div>
                 <div className="pt-4 border-t border-gray-800 flex justify-end items-center">
-                   <a href="https://github.com/anant720/SecurePass-Analyzer" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                  <a href="https://github.com/anant720/SecurePass-Analyzer" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
                     <Github size={18} />
                   </a>
                 </div>
@@ -605,9 +603,9 @@ const Portfolio = () => {
             {/* Project 3: AI Guardian Engine */}
             <div className="group bg-[#151515] border border-gray-800 hover:border-purple-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <Shield size={48} className="text-purple-500/50 group-hover:text-purple-500 transition-colors" />
-                 </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Shield size={48} className="text-purple-500/50 group-hover:text-purple-500 transition-colors" />
+                </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-bold text-white mb-2">AI Guardian Engine</h4>
@@ -626,12 +624,12 @@ const Portfolio = () => {
               </div>
             </div>
 
-             {/* Project 4: PhishNetra */}
-             <div className="group bg-[#151515] border border-gray-800 hover:border-red-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+            {/* Project 4: PhishNetra */}
+            <div className="group bg-[#151515] border border-gray-800 hover:border-red-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <Code size={48} className="text-red-500/50 group-hover:text-red-500 transition-colors" />
-                 </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Code size={48} className="text-red-500/50 group-hover:text-red-500 transition-colors" />
+                </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-bold text-white mb-2">PhishNetra</h4>
@@ -643,19 +641,19 @@ const Portfolio = () => {
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">Python</span>
                 </div>
                 <div className="pt-4 border-t border-gray-800 flex justify-end items-center">
-                   <a href="https://github.com/anant720/PhishNetra" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                  <a href="https://github.com/anant720/PhishNetra" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
                     <Github size={18} />
                   </a>
                 </div>
               </div>
             </div>
-            
-             {/* Project 5: Campus Buddy */}
-             <div className="group bg-[#151515] border border-gray-800 hover:border-yellow-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+
+            {/* Project 5: Campus Buddy */}
+            <div className="group bg-[#151515] border border-gray-800 hover:border-yellow-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <MapPin size={48} className="text-yellow-500/50 group-hover:text-yellow-500 transition-colors" />
-                 </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <MapPin size={48} className="text-yellow-500/50 group-hover:text-yellow-500 transition-colors" />
+                </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-bold text-white mb-2">Campus Buddy</h4>
@@ -671,12 +669,12 @@ const Portfolio = () => {
               </div>
             </div>
 
-             {/* Project 6: LiquidPass */}
-             <div className="group bg-[#151515] border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+            {/* Project 6: LiquidPass */}
+            <div className="group bg-[#151515] border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <Lock size={48} className="text-cyan-500/50 group-hover:text-cyan-500 transition-colors" />
-                 </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Lock size={48} className="text-cyan-500/50 group-hover:text-cyan-500 transition-colors" />
+                </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <h4 className="text-xl font-bold text-white mb-2">LiquidPass</h4>
@@ -688,8 +686,11 @@ const Portfolio = () => {
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">AES-256-GCM</span>
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">E2E Encryption</span>
                 </div>
-                <div className="pt-4 border-t border-gray-800 flex justify-end items-center">
-                   <a href="https://github.com/anant720/LiquidPass" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                <div className="pt-4 border-t border-gray-800 flex justify-between items-center gap-3">
+                  <a href="https://passfront.vercel.app/" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-xs text-cyan-400 hover:text-cyan-300">
+                    <ExternalLink size={14} /> Live Demo
+                  </a>
+                  <a href="https://github.com/anant720/LiquidPass" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
                     <Github size={18} />
                   </a>
                 </div>
@@ -849,43 +850,43 @@ const Portfolio = () => {
                 link: "#"
               },
               {
-                 title: "Spoken Tutorial C & C++",
-                 issuer: "IIT Bombay",
-                 date: "May 2025",
-                 image: "/cert-cpp.jpg",
-                 link: "#"
+                title: "Spoken Tutorial C & C++",
+                issuer: "IIT Bombay",
+                date: "May 2025",
+                image: "/cert-cpp.jpg",
+                link: "#"
               },
               {
-                 title: "Connect And Protect: Networks and Networks Security",
-                 issuer: "Google",
-                 date: "Feb 2026",
-                 image: "/cert-networksecurity.jpg",
-                 link: "#"
+                title: "Connect And Protect: Networks and Networks Security",
+                issuer: "Google",
+                date: "Feb 2026",
+                image: "/cert-networksecurity.jpg",
+                link: "#"
               }
             ].map((cert, index) => (
               <div key={index} className="group bg-[#151515] border border-gray-800 p-6 rounded-lg hover:border-cyan-500/50 transition-colors">
                 {/* Certificate Image */}
                 <div className="w-full h-40 bg-gray-900 rounded mb-4 border border-gray-800 overflow-hidden group-hover:border-cyan-500/30 transition-colors">
-                   <img
-                     src={cert.image}
-                     alt={`${cert.title} Certificate`}
-                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                     onClick={() => setFullscreenImage({
-                       src: cert.image,
-                       alt: `${cert.title} Certificate - ${cert.issuer}`
-                     })}
-                     onError={(e) => {
-                       e.target.style.display = 'none';
-                       e.target.nextSibling.style.display = 'flex';
-                     }}
-                   />
-                   {/* Fallback for broken images */}
-                   <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
-                     <FileText size={32} className="mb-2 opacity-50" />
-                     <span className="text-[10px] uppercase tracking-widest font-semibold">Cert Photo</span>
-                   </div>
+                  <img
+                    src={cert.image}
+                    alt={`${cert.title} Certificate`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    onClick={() => setFullscreenImage({
+                      src: cert.image,
+                      alt: `${cert.title} Certificate - ${cert.issuer}`
+                    })}
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  {/* Fallback for broken images */}
+                  <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 hidden">
+                    <FileText size={32} className="mb-2 opacity-50" />
+                    <span className="text-[10px] uppercase tracking-widest font-semibold">Cert Photo</span>
+                  </div>
                 </div>
-                
+
                 <h4 className="text-white font-bold mb-1 leading-tight">{cert.title}</h4>
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-xs text-cyan-500 uppercase tracking-wider">{cert.issuer}</span>
@@ -911,8 +912,8 @@ const Portfolio = () => {
           <p className="text-gray-400 mb-12 max-w-xl mx-auto">
             Currently open to internships and collaborative projects. Whether you have a question or just want to say hi, I'll try my best to get back to you!
           </p>
-          
-          <a 
+
+          <a
             href="mailto:nntsuthar@gmail.com"
             className="inline-block px-10 py-4 bg-white text-black font-bold tracking-widest hover:bg-cyan-400 hover:scale-105 transition-all duration-300 mb-16"
           >
