@@ -690,7 +690,7 @@ const Portfolio = () => {
                   <a href="https://passfront.vercel.app/" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-xs text-cyan-400 hover:text-cyan-300">
                     <ExternalLink size={14} /> Live Demo
                   </a>
-                  <a href="https://github.com/anant720/LiquidPass" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                  <a href="https://github.com/anant720/passfront" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
                     <Github size={18} />
                   </a>
                 </div>
