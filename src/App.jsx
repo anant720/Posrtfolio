@@ -649,7 +649,13 @@ const Portfolio = () => {
             </div>
 
             {/* Project 5: ShadowTrace */}
-            <div className="group bg-[#151515] border border-gray-800 hover:border-blue-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+            <div className="group bg-[#151515] border-2 border-blue-500/80 hover:border-blue-400 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full relative">
+              {/* Recent Project Badge */}
+              <div className="absolute top-4 right-4 z-10">
+                <span className="bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-lg shadow-blue-500/50 animate-pulse">
+                  RECENT
+                </span>
+              </div>
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Shield size={48} className="text-blue-500/50 group-hover:text-blue-500 transition-colors" />
