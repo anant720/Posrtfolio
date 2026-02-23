@@ -49,8 +49,8 @@ AI-based system detecting scam and phishing messages in real-time with risk scor
 **PhishNetra** — *Cybersecurity · Python*
 Advanced phishing detection tool identifying malicious URLs and protecting users from cyber threats.
 
-**Campus Buddy** — *Google Apps Script*
-University information system providing centralised campus details, map navigation, 3D views, and event management.
+**ShadowTrace** — *FastAPI · Next.js · Chrome Manifest V3*
+Real-time Phishing Intelligence & Deep Forensic Suite. Enterprise-grade threat detection engine with server-side credential scrubbing and AI-driven behavioral analysis. — [GitHub](https://github.com/anant720/ShadowTrace)
 
 ---
 

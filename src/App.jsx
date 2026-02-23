@@ -648,23 +648,27 @@ const Portfolio = () => {
               </div>
             </div>
 
-            {/* Project 5: Campus Buddy */}
-            <div className="group bg-[#151515] border border-gray-800 hover:border-yellow-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
+            {/* Project 5: ShadowTrace */}
+            <div className="group bg-[#151515] border border-gray-800 hover:border-blue-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin size={48} className="text-yellow-500/50 group-hover:text-yellow-500 transition-colors" />
+                  <Shield size={48} className="text-blue-500/50 group-hover:text-blue-500 transition-colors" />
                 </div>
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <h4 className="text-xl font-bold text-white mb-2">Campus Buddy</h4>
+                <h4 className="text-xl font-bold text-white mb-2">ShadowTrace</h4>
                 <p className="text-gray-400 text-sm mb-4">
-                  University info system providing centralized campus details, map navigation, 3D views, and event management.
+                  Real-time Phishing Intelligence & Deep Forensic Suite. Enterprise-grade threat detection engine with server-side credential scrubbing and AI-driven behavioral analysis.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-auto mb-4">
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">Google Apps Script</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">FastAPI</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">Next.js</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">Chrome Manifest V3</span>
                 </div>
                 <div className="pt-4 border-t border-gray-800 flex justify-end items-center">
-                  <Github size={18} className="text-gray-400 hover:text-white cursor-pointer" />
+                  <a href="https://github.com/anant720/ShadowTrace" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                    <Github size={18} />
+                  </a>
                 </div>
               </div>
             </div>
