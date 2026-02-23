@@ -231,6 +231,9 @@ const Portfolio = () => {
               <a href="https://github.com/anant720" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-white transition-colors" title="GitHub">
                 <Github size={20} /> <span className="text-sm">GitHub</span>
               </a>
+              <a href="https://www.linkedin.com/in/anant-suthar-b5102a326/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-blue-600 transition-colors" title="LinkedIn">
+                <Linkedin size={20} /> <span className="text-sm">LinkedIn</span>
+              </a>
               <a href="https://leetcode.com/u/__anant72/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-yellow-500 transition-colors" title="LeetCode">
                 <Code size={20} /> <span className="text-sm">LeetCode</span>
               </a>

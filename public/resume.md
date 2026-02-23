@@ -2,7 +2,7 @@
 
 **Cybersecurity & Full-Stack Developer**
 
-📍 Pune, India · ✉️ [nntsuthar@gmail.com](mailto:nntsuthar@gmail.com) · 🔗 [github.com/anant720](https://github.com/anant720) · 💻 [LeetCode](https://leetcode.com/u/__anant72/) · 🏅 [HackerRank](https://www.hackerrank.com/profile/nntsuthar)
+📍 Pune, India · ✉️ [nntsuthar@gmail.com](mailto:nntsuthar@gmail.com) · 🔗 [GitHub](https://github.com/anant720) · 👔 [LinkedIn](https://www.linkedin.com/in/anant-suthar-b5102a326/) · 💻 [LeetCode](https://leetcode.com/u/__anant72/) · 🏅 [HackerRank](https://www.hackerrank.com/profile/nntsuthar)
 
 ---
 
