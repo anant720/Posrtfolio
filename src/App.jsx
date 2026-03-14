@@ -552,6 +552,38 @@ const Portfolio = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Project 0: Sentinel Security Platform */}
+            <div className="group bg-[#151515] border-2 border-cyan-500/80 hover:border-cyan-400 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full relative">
+              {/* Top Project Badge */}
+              <div className="absolute top-4 right-4 z-10">
+                <span className="bg-cyan-500 text-black text-[10px] uppercase font-bold px-2 py-1 rounded-full shadow-lg shadow-cyan-500/50 animate-pulse">
+                  FEATURED
+                </span>
+              </div>
+              <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Shield size={48} className="text-cyan-500/50 group-hover:text-cyan-500 transition-colors" />
+                </div>
+              </div>
+              <div className="p-6 flex-1 flex flex-col">
+                <h4 className="text-xl font-bold text-white mb-2">Sentinel Security Platform</h4>
+                <p className="text-gray-400 text-sm mb-4">
+                  Professional-grade, multi-tenant cybersecurity telemetry platform built with Node.js and React. Features live WebSocket threat streaming, RBAC auth, and custom heuristic scanning rules.
+                </p>
+                <div className="flex flex-wrap gap-2 mt-auto mb-4">
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">Node.js</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">React</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">Redis</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-1 bg-gray-800 text-gray-300 rounded">PostgreSQL</span>
+                </div>
+                <div className="pt-4 border-t border-gray-800 flex justify-end items-center">
+                  <a href="https://github.com/anant720/Sentinel" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white">
+                    <Github size={18} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
             {/* Project 1: GigFlow */}
             <div className="group bg-[#151515] border border-gray-800 hover:border-green-500/50 transition-all duration-300 rounded-lg overflow-hidden flex flex-col h-full">
               <div className="h-48 bg-gray-800 relative overflow-hidden group-hover:bg-gray-700 transition-colors">
